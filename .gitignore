@@ -1,0 +1,15 @@
+# databases #
+#############
+*.db
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+
+# Password files #
+##################
+config.py
+config.pyc
+phoneServer.py
