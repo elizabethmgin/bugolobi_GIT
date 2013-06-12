@@ -378,7 +378,7 @@ def promote_SMS(newSMS, sellersListName, fromOwner):
         else:
             statement = "This seller is inactive and will not receive the message."
             print >> sys.stderr, statement
-    statement = "Webale kusindika obubaka ku lukalala lwa kataale e " + str(sellersListName) 
+    statement = "Webale kusindika obubaka ku lukalala lwa ba " + str(sellersListName) 
     # Thank you for sending your message to the list of [blank]
     create_Outbox_Message(sendersNumber, statement)
     # print >> sys.stderr, statement
@@ -630,7 +630,7 @@ def check_SMS(newSMS):
         else:
             statement = newSeller
     elif (bodyList[0] == 'help') or (bodyList[0] == 'obuyambi'):
-        statement = "Olukalala lw'omu katale k'e Bugoloobi luku sobozesa okusindikira abantu okusasulira obubaka bwa muutu omu bwokka. Okutwegattako Goberera enkola eno 'okuyunga Erinnya Eppaatiike Erinnya Ery'ekika Byotunda'" #explanation of how to join
+        statement = "Olukalala lw'omu katale k'e Bugolobi lukosobozesa okusindikira abantu obubaka. Osasulira obubaka bwa muntu omu bwokka 'okuyunga Erinnya Eppaatiike Erinnya Ery'ekika Byotunda'" #explanation of how to join
         # The Bugolobi Market Mailing List allows you to send messages to over 40 members, but you only need to pay for one message! Instructions on how to join, etc.
         create_Outbox_Message(newSMS.number, statement)
     elif (bodyList[0] == 'kuvawo') or (bodyList[0] == 'leave'):
