@@ -104,13 +104,3 @@ class Outbox(BaseModel):
         return '%s // %s // %s // %s' % (self.sent, self.createdAt, self.number, self.body)
     class Meta:
             order_by = ('-sent',)
-
-# simple utility function to create tables
-def create_tables():
-    Number.create_table(True)
-    SMS.create_table(True)
-    Seller.create_table(True)
-    Market.create_table(True)
-    List.create_table(True)
-    ListRelationship.create_table(True)
-    Outbox.create_table(True)
