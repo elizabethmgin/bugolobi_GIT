@@ -1,7 +1,5 @@
 from flask import Flask
 from peewee import *
-from config import DATABASE
-
 
 app = Flask(__name__)
 app.config.from_object('config')
